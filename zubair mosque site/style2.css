@@ -1,0 +1,257 @@
+:root{
+    --pink:#e84393;
+}
+
+*{
+    margin:0; padding:0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline:none; border:none;
+    text-decoration:none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+hmtl{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+section{
+    padding:2rem 9%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background: #333;
+    color: #fff;
+    padding: .4rem 1rem;
+    cursor: pointer;
+    font-size: .7rem;
+}
+
+.btn:hover{
+    background: deeppink;
+}
+
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+header .logo span{
+    color:var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding:0 1.5rem;
+    color: #666;
+}
+
+header .navbar a:hover{
+    color:var(--pink);
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1.5rem;
+}
+
+header .icons a:hover{
+    color:var(--pink);
+}
+
+header #toggler{
+    display: none;
+}
+
+header .fa-bars{
+    font-size: 3rem;
+    color: #333;
+    border-radius: .5rem;
+    padding: .5rrem 1.5rem;
+    cursor: pointer;
+    border: .1rem solid rgba(0,0,0,.3);
+    display: none;
+}
+     
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 35vh;
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(images2/1789.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}    
+
+.home .content{
+    max-width: 50rem;
+    position: absolute;
+    top: 14%; left: 75%; right: 0;
+}
+
+.home .content h3{
+    font-size: 2rem;
+    color: #fff;
+}
+
+.home .content span{
+    font-size: 1rem;
+    color: deeppink;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content ul{
+    padding: 2rem 9%;
+    display: flex;
+    z-index: 1000;
+    font-size: 0.5rem;
+    color: black;
+    padding: 1rem 0%;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+.home .content ul li{
+    display: inline-block;
+}
+
+.home .content ul a{
+    font-size: 0.8rem;
+    padding:0 1rem;
+    color: #fff;
+}
+    
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+  
+.map-container {
+    width: 50%;
+    
+}
+  
+.contact-container {
+    width: 50%;
+    font-size: large;
+    padding: 15%;
+}
+  
+.contact-container h2 {
+    margin-top: 0;
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+/* media queries */
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    
+    header{
+        padding: 2rem;
+    }
+    
+    section{
+        padding: 2rem;
+    }
+    
+    .home{
+        background-position: left;
+    }
+}    
+      
+@media (max-width:768px){
+    header .fa-bars{
+        display: block;
+    }
+    
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    
+    header .navbar a{
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+        display: block;
+    }
+    
+    .home{
+        min-height: 30vh;
+        min-width: 100vh;
+    }
+
+    .home .content h3{
+        font-size: 1.5rem;
+        margin-right: 20px;
+    }
+    
+    .home .content span{
+        font-size: 1rem;
+        margin-right: 20px;
+    }
+    
+    .home .content ul{
+        font-size: .8rem;
+        
+    }
+    
+    .home .content ul a{
+        font-size: .8rem;
+    }
+    
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+}
